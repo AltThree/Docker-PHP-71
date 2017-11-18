@@ -1,4 +1,4 @@
-FROM php:7.1.10-cli
+FROM php:7.1.11-cli
 
 RUN apt-get update && apt-get -y install apt-transport-https curl
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
