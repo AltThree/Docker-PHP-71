@@ -7,6 +7,6 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
 RUN echo "memory_limit=2048M" > $PHP_INI_DIR/conf.d/memory-limit.ini
 RUN apt-get -y install git libsqlite3-dev libxml2-dev unzip yarn zlib1g-dev
-RUN docker-php-ext-install bcmath pcntl pdo pdo_sqlite soap zip
+RUN docker-php-ext-install bcmath ds pcntl pdo pdo_sqlite soap zip
 RUN curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin/composer
 RUN composer global require "hirak/prestissimo:^0.3"
